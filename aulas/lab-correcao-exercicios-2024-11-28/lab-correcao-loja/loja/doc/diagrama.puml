@@ -1,0 +1,22 @@
+@startuml
+skinparam dpi 300
+skinparam class {
+	BackgroundColor LightBlue
+}
+hide circle
+skinparam shadowing false
+hide empty members
+
+class Livro
+class Jogo
+class Produto
+
+Produto <|-- Livro
+
+Produto <|-- Jogo
+
+class Loja
+
+Loja "1" -> "1..*" Produto
+
+@enduml
