@@ -113,8 +113,6 @@ public class TestadorQ2 {
 		b.regenera();
 		System.out.println("Pikachu com "+p.getPontosVitalidade()+" pontos.");
 		System.out.println("Blastoise com "+b.getPontosVitalidade()+" pontos.");
-
-		
 	}
 
 }

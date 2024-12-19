@@ -26,7 +26,26 @@ package q1;
 public class TestadorQ1 {
 
 	public static void main(String[] args) {
-		
+		Empresa coca = new Empresa("Coca Cola");
+		Departamento fanta = coca.createDepartamento("Fanta");
+		Departamento zero = coca.createDepartamento("Coca Zero");
+		Setor rhFanta = fanta.createSetor("RH");
+		Setor vendasFanta = fanta.createSetor("Vendas");
+		Setor rhZero = zero.createSetor("RH");
+		Setor marketingZero = zero.createSetor("Marketing");
+		Funcionario joao = new Funcionario("Joao", 15660.30);
+		Funcionario leticia = new Funcionario("Leticia", 	40000.20);
+		Funcionario abril = new Funcionario("Abril", 7860.88);
+		rhFanta.addFuncionario(joao);
+		vendasFanta.addFuncionario(leticia);
+		rhZero.addFuncionario(abril);
+		System.out.println("Antes de transferencias:");
+		System.out.println(coca);
+
+		abril.transferirSetores(marketingZero);
+		joao.transferirSetores(vendasFanta);
+		System.out.println("Depois de transferencias:");
+		System.out.println(coca);
 	}
 
 }
